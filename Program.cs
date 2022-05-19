@@ -1,69 +1,55 @@
 ﻿using System;
 
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
-Console.WriteLine();
+Main();
 
-// Let the moose speak!
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
 
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
+    // Let the moose speak!
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
+
+    // As a question
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
+}
+void ifElse(bool question,string mTrue,string mFalse){
+ if(question){
+     MooseSays(mTrue);
+ }
+ else{
+     MooseSays(mFalse);
+ }
+}
 
 // As a question
 void CanadaQuestion()
 {
     bool isTrue = MooseAsks("Is Canada real?");
-    if (isTrue)
-    {
-        MooseSays("Really? It seems very unlikely.");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!!");
-    }
+    ifElse(isTrue,"Really? It seems very unlikely.","I  K N E W  I T !!!");
 }
 
 void EnthusiasticQuestion()
 {
     bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
+    ifElse(isEnthusiastic,"Yay!","You should try it!");
 }
 
 void LoveCSharpQuestion()
 {
     bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
+    ifElse(doesLoveCSharp,"Good job sucking up to your instructor!","You will...oh, yes, you will..."); 
 }
 
 void SecretQuestion()
 {
     bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("ME TOO!!!! I love secrets...tell me one!");
-    }
-    else
-    {
-        MooseSays("Oh, no...secrets are the best, I love to share them!");
-    }
+    ifElse(wantsSecret,"ME TOO!!!! I love secrets...tell me one!","Oh, no...secrets are the best, I love to share them!");
 }
 
 
